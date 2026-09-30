@@ -1,0 +1,278 @@
+[
+  {
+    "id": "SITE-001",
+    "nom": "Gaz de Tahiti",
+    "type": "Stockage et embouteillage de gaz",
+    "region": "Dépôts pétroliers de la zone récifale Est",
+    "coordonnees": {
+      "latitude": -17.52749,
+      "longitude": -149.574265,
+      "latitude_dms": "17°31'41\" S",
+      "longitude_dms": "149°34'26\" W"
+    }
+  },
+  {
+    "id": "SITE-002",
+    "nom": "STDS-PETROPOL (MOBIL)",
+    "type": "Stockage de gazole, chargement de camions citernes et avitaillement des navires de pêche",
+    "region": "Dépôts pétroliers de la zone récifale Est",
+    "coordonnees": {
+      "latitude": -17.527041,
+      "longitude": -149.573847,
+      "latitude_dms": "17°31'37\" S",
+      "longitude_dms": "149°34'26\" W"
+    }
+  },
+  {
+    "id": "SITE-003",
+    "nom": "STDP-TOTAL",
+    "type": "Stockage d'hydrocarbures",
+    "region": "Dépôts pétroliers de la zone récifale Est",
+    "coordonnees": {
+      "latitude": -17.525404,
+      "longitude": -149.571894,
+      "latitude_dms": "17°31'30\" S",
+      "longitude_dms": "149°34'19\" W"
+    }
+  },
+  {
+    "id": "SITE-004",
+    "nom": "SPDH-PPS",
+    "type": "Stockage d'hydrocarbures",
+    "region": "Dépôts pétroliers de la zone récifale Est",
+    "coordonnees": {
+      "latitude": -17.522601,
+      "longitude": -149.567914,
+      "latitude_dms": "17°31'19\" S",
+      "longitude_dms": "149°34'05\" W"
+    }
+  },
+  {
+    "id": "SITE-005",
+    "nom": "POLYPETROLE SHELL",
+    "type": "Stockage de fioul, LSFO",
+    "region": "Dépôts pétroliers de la zone récifale Est",
+    "coordonnees": {
+      "latitude": -17.523521,
+      "longitude": -149.568998,
+      "latitude_dms": "17°31'23\" S",
+      "longitude_dms": "149°34'08\" W"
+    }
+  },
+  {
+    "id": "SITE-006",
+    "nom": "STTE-TOTAL",
+    "type": "Stockage d'hydrocarbures",
+    "region": "Dépôts pétroliers de zone FARE UTE",
+    "coordonnees": {
+      "latitude": -17.532033,
+      "longitude": -149.571111,
+      "latitude_dms": "17°31'55\" S",
+      "longitude_dms": "149°34'16\" W"
+    }
+  },
+  {
+    "id": "SITE-007",
+    "nom": "STDP-TOTAL",
+    "type": "Stockage d'hydrocarbures",
+    "region": "Dépôts pétroliers de zone FARE UTE",
+    "coordonnees": {
+      "latitude": -17.532954,
+      "longitude": -149.572195,
+      "latitude_dms": "17°31'59\" S",
+      "longitude_dms": "149°34'19\" W"
+    }
+  },
+  {
+    "id": "SITE-008",
+    "nom": "SOMSTAT-Aéroport",
+    "type": "Stockage de kérosène",
+    "region": "Aéroport",
+    "coordonnees": {
+      "latitude": -17.551808,
+      "longitude": -149.613823,
+      "latitude_dms": "17°33'04\" S",
+      "longitude_dms": "149°36'47\" W"
+    }
+  },
+  {
+    "id": "SITE-009",
+    "nom": "MOTU UTA",
+    "type": "Appontement pétrolier",
+    "region": "Appontements – canalisations",
+    "coordonnees": {
+      "latitude": -17.538663,
+      "longitude": -149.576583,
+      "latitude_dms": "17°32'17\" S",
+      "longitude_dms": "149°34'37\" W"
+    }
+  },
+  {
+    "id": "SITE-010",
+    "nom": "FARE UTE",
+    "type": "Appontement pétrolier",
+    "region": "Appontements – canalisations",
+    "coordonnees": {
+      "latitude": -17.532555,
+      "longitude": -149.572141,
+      "latitude_dms": "17°31'59\" S",
+      "longitude_dms": "149°34'19\" W"
+    }
+  },
+  {
+    "id": "SITE-011",
+    "nom": "Centrale EDT front de mer",
+    "type": "Centrale thermique",
+    "region": "Autres zones",
+    "coordonnees": {
+      "latitude": -17.534,
+      "longitude": -149.567,
+      "latitude_dms": "17°32'02\" S",
+      "longitude_dms": "149°34'01\" W"
+    }
+  },
+  {
+    "id": "SITE-012",
+    "nom": "Marina Comptoir Marine (TOTAL)",
+    "type": "Marina",
+    "region": "Autres zones",
+    "coordonnees": {
+      "latitude": -17.585,
+      "longitude": -149.616,
+      "latitude_dms": "17°35'06\" S",
+      "longitude_dms": "149°36'58\" W"
+    }
+  },
+  {
+    "id": "SITE-013",
+    "nom": "Marina Taina située sur le lagon",
+    "type": "Marina",
+    "region": "Autres zones",
+    "coordonnees": {
+      "latitude": -17.585,
+      "longitude": -149.615,
+      "latitude_dms": "17°35'06\" S",
+      "longitude_dms": "149°36'54\" W"
+    }
+  },
+  {
+    "id": "SITE-014",
+    "nom": "Marina Lotus",
+    "type": "Marina",
+    "region": "Autres zones",
+    "coordonnees": {
+      "latitude": -17.589,
+      "longitude": -149.614,
+      "latitude_dms": "17°35'20\" S",
+      "longitude_dms": "149°36'50\" W"
+    }
+  },
+  {
+    "id": "SITE-015",
+    "nom": "EDT-ZI Punaruu",
+    "type": "Centrale thermique",
+    "region": "Centrales Thermiques EDT",
+    "coordonnees": {
+      "latitude": -17.633,
+      "longitude": -149.598,
+      "latitude_dms": "17°37'59\" S",
+      "longitude_dms": "149°35'53\" W"
+    }
+  },
+  {
+    "id": "SITE-016",
+    "nom": "Brasserie de Tahiti",
+    "type": "Site de production",
+    "region": "Sites industriels - ZI Punaruu",
+    "coordonnees": {
+      "latitude": -17.633,
+      "longitude": -149.599,
+      "latitude_dms": "17°37'59\" S",
+      "longitude_dms": "149°35'56\" W"
+    }
+  },
+  {
+    "id": "SITE-017",
+    "nom": "Pacifique plastique",
+    "type": "Fabrication de produits d'entretien",
+    "region": "Sites industriels - ZI Punaruu",
+    "coordonnees": {
+      "latitude": -17.633,
+      "longitude": -149.6,
+      "latitude_dms": "17°37'59\" S",
+      "longitude_dms": "149°36'00\" W"
+    }
+  },
+  {
+    "id": "SITE-018",
+    "nom": "SOMAC",
+    "type": "Centrale de dosage ciment",
+    "region": "Sites industriels - Vallée Fautaua",
+    "coordonnees": {
+      "latitude": -17.544949,
+      "longitude": -149.554165,
+      "latitude_dms": "17°32'42\" S",
+      "longitude_dms": "149°33'11\" W"
+    }
+  },
+  {
+    "id": "SITE-019",
+    "nom": "Peintures FULLER",
+    "type": "Fabrication de peinture",
+    "region": "Sites industriels - Vallée Fautaua",
+    "coordonnees": {
+      "latitude": -17.543783,
+      "longitude": -149.553232,
+      "latitude_dms": "17°32'35\" S",
+      "longitude_dms": "149°33'11\" W"
+    }
+  },
+  {
+    "id": "SITE-020",
+    "nom": "MOBIL",
+    "type": "Atelier d'assemblage de fûts métalliques",
+    "region": "Sites industriels - ZI Tipaerui",
+    "coordonnees": {
+      "latitude": -17.552212,
+      "longitude": -149.572082,
+      "latitude_dms": "17°33'07\" S",
+      "longitude_dms": "149°34'19\" W"
+    }
+  },
+  {
+    "id": "SITE-021",
+    "nom": "SOMALU",
+    "type": "Usine de rotomoulage",
+    "region": "Sites industriels - ZI Tipaerui",
+    "coordonnees": {
+      "latitude": -17.554,
+      "longitude": -149.571,
+      "latitude_dms": "17°33'14\" S",
+      "longitude_dms": "149°34'16\" W"
+    }
+  },
+  {
+    "id": "SITE-022",
+    "nom": "PACIFI ALU",
+    "type": "Fabrication de produits ménagers",
+    "region": "Sites industriels - ZI Tipaerui",
+    "coordonnees": {
+      "latitude": -17.556,
+      "longitude": -149.57,
+      "latitude_dms": "17°33'22\" S",
+      "longitude_dms": "149°34'12\" W"
+    }
+  },
+  {
+    "id": "SITE-023",
+    "nom": "PLASTISERD",
+    "type": "Transformation de matière plastique",
+    "region": "Sites industriels - ZI Tipaerui",
+    "coordonnees": {
+      "latitude": -17.555071,
+      "longitude": -149.570038,
+      "latitude_dms": "17°33'18\" S",
+      "longitude_dms": "149°34'12\" W"
+    }
+  }
+]

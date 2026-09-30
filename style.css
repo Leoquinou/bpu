@@ -1,0 +1,261 @@
+/* ==========================================================================
+   1. STYLES GÉNÉRAUX & CARTE
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+#map {
+    width: 100vw;
+    height: 100vh;
+    background-color: #0f172a;
+}
+
+/* Scrollbar personnalisée style Glassmorphism */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* ==========================================================================
+   2. PASTILLE ET BADGES GLASSMORPHISM (POINTS SUR LA CARTE)
+   ========================================================================== */
+
+/* Pastille centrale neutre haut contraste */
+.site-dot {
+    background: #334155;               /* Gris acier neutre & élégant */
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;         /* Contour blanc : assure le contraste sur la mer et la verdure */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Halo d'impulsion translucide gris neutre */
+.site-dot::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 0 6px rgba(51, 65, 85, 0.5);
+    animation: neutral-radar-pulse 2s infinite ease-out;
+    pointer-events: none;
+}
+
+/* Animation d'impulsion du halo */
+@keyframes neutral-radar-pulse {
+    0% {
+        transform: scale(0.6);
+        opacity: 0.9;
+        border-color: rgba(255, 255, 255, 0.9);
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+        border-color: rgba(255, 255, 255, 0);
+    }
+}
+
+/* Interaction au survol */
+.site-dot:hover {
+    background: #38bdf8;
+    border-color: #ffffff;
+    transform: scale(1.15);
+}
+
+.site-dot:hover::after {
+    border-color: rgba(56, 189, 248, 0.8);
+}
+
+/* Badge circulaire numéroté (Style Glassmorphism Cyan) */
+.site-badge-num {
+    background: rgba(2, 132, 199, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 
+        0 4px 12px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   3. PANNEAU RÉCAPITULATIF (GLASSMORPHISM SANS TITRE)
+   ========================================================================== */
+
+.sites-index-panel {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1000;
+    
+    /* Transparence & Flou dépoli (Glassmorphism) */
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    
+    color: #f8fafc;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 16px;
+    
+    /* Dimensions du panneau */
+    width: 420px;
+    max-width: 90vw;
+    max-height: 60vh;
+    
+    overflow-y: auto;
+    
+    /* Ombre haute précision : Ombre diffuse + Lueur interne subtile */
+    box-shadow: 
+        0 20px 40px -10px rgba(0, 0, 0, 0.6),
+        0 1px 3px 0 rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+        
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sites-index-panel:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 
+        0 25px 50px -12px rgba(0, 0, 0, 0.7),
+        0 2px 4px 0 rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Masquage complet du label "Sites visibles" */
+.sites-index-panel h4 {
+    display: none !important;
+}
+
+.sites-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.site-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 8px 10px;
+    border-radius: 10px;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.site-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(3px);
+}
+
+.site-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    line-height: 1.4;
+    
+    /* Affichage du texte intégral sans tronquage ni césure */
+    hyphens: none;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+.site-name {
+    font-weight: 600;
+    color: #f8fafc;
+    font-size: 13px;
+}
+
+/* Badge Type : Style Blanc Ardoise Ultra-Minimaliste */
+.site-type-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    color: #cbd5e1;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding: 2px 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   4. POPUPS LEAFLET (ADAPTATION GLASSMORPHISM)
+   ========================================================================== */
+
+.leaflet-popup-content-wrapper {
+    background: rgba(15, 23, 42, 0.75) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    color: #f8fafc !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 12px !important;
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    padding: 4px !important;
+}
+
+.leaflet-popup-tip {
+    background: rgba(15, 23, 42, 0.75) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+    color: #cbd5e1 !important;
+    padding: 8px 10px 0 0 !important;
+}
+
+.leaflet-container a.leaflet-popup-close-button:hover {
+    color: #ffffff !important;
+}
